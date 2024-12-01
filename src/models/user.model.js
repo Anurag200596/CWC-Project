@@ -25,7 +25,7 @@ const userschema = new Schema({
         trim: true,
         index: true
     },
-    avatar: {
+    thumbnail: {
         type: String,  // cloudnary ka url use krenge
         required: true,
 
@@ -52,7 +52,7 @@ const userschema = new Schema({
 
 userschema.pre("Save", async function (next) {
     if (!this.password.ismodified("password")) return next()
-    this.password = bcrypt.hash(thiss.password, 10)
+    this.password = bcrypt.hash(this.password, 10)
     next()
 
 })

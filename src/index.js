@@ -4,7 +4,8 @@ import dotenv from "dotenv"
 // import {DB_NAME} from "./constants.js"
 import connectdb from "./db/index2.js"
 // FIRST APPROACH
-// import express from "express"
+import express from "express"
+import {app} from "./app.js"
 //  const app = express()
 //  (async ()=>{
 //     try{
